@@ -4,6 +4,7 @@
 
 ![Language: C#](https://img.shields.io/badge/language-C%23-188601)
 ![Game Engine: Unity](https://img.shields.io/badge/game_engine-Unity-9DA1A9)
+![Version Release](https://img.shields.io/badge/release-v2.0.0-blue)
 ![Highschool Project](https://img.shields.io/badge/-Highschool%20project-red?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/WateryLemon/Computer-Graphics-Summative)
 
@@ -47,7 +48,7 @@ This enhanced version of Perlin noise introduces a new value called **octaves**,
 
 ---
 
-## 📦 Versions ![Version Release](https://img.shields.io/badge/release-v2.0.0-blue)
+## 📦 Versions
 This project was built in 3 stages. Each release represents a milestone toward the final version.
 
 ### 🧭 V0.0.1 – Alpha
