@@ -1,5 +1,28 @@
+![Procedural_Terrain_Simulator](https://github.com/user-attachments/assets/34d74e0e-3623-4a1a-b2f2-dabf806826cf)
+
+<a name="top"></a>
+
+![Language: C#](https://img.shields.io/badge/language-C%23-188601)
+![Game Engine: Unity](https://img.shields.io/badge/game_engine-Unity-9DA1A9)
+![Highschool Project](https://img.shields.io/badge/-Highschool%20project-red?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/WateryLemon/Computer-Graphics-Summative)
+
+⭐ Star us on GitHub — every star is greatly appreciated!
+
+📑 For an in-depth look into the making of this project, please read my [report](https://github.com/WateryLemon/EPQ-Procedural-Terrain-Simulation-/blob/main/EPQ%20Report.pdf).
+
+## Table of Contents
+- [About](#-about)
+- [Theory](#-theory)
+- [Versions](#-versions)
+- [How to Build](#-how-to-build)
+- [Project Structure & Components](#-project-structure--components)
+- [Contacts](#-contacts)
+
+---
+
 ## 🌍 About
-Procedural Terrain Simulation is a Unity/C# project that demonstrates procedural generation techniques for creating 2D terrain maps. Developed as an Extended Project Qualification (EPQ), this project aims to teach and showcase how real-world terrain features can be simulated algorithmically, with a focus on clarity, modularity, and educational value.
+**Procedural Terrain Simulation** is a Unity/C# project that demonstrates procedural generation techniques for creating 2D terrain maps. Developed as an Extended Project Qualification (EPQ), this project aims to teach and showcase how real-world terrain features can be simulated algorithmically, with a focus on clarity, modularity, and educational value.
 
 - **Procedural Generation**: Uses Perlin noise and fractal noise to generate realistic terrain heightmaps.
 - **Biomes & Color Mapping**: Assigns different colors to terrain types (biomes) based on height values.
@@ -8,18 +31,46 @@ Procedural Terrain Simulation is a Unity/C# project that demonstrates procedural
 
 This project is ideal for learning about procedural content generation, Unity scripting, and the basics of computer graphics in a game engine context.
 
+---
 
+## 🧠 Theory
 
-## ![Static Badge](https://img.shields.io/badge/release-v2.0)
+### Perlin Noise
+This form of noise is a pseudorandom assortment of pixels. It also includes intermediate values between black and white. The main difference lies in the way its gradient works: whereas value noise has a non-random gradient, Perlin noise includes an element of randomness, creating smoother and more reliable terrain generation.
 
+<img width="177" alt="Screenshot 2025-05-22 at 16 37 38" src="https://github.com/user-attachments/assets/c0ec2ec4-0be7-48c0-ab25-4f41a7824158" />
 
+### Fractal Perlin Noise
+This enhanced version of Perlin noise introduces a new value called **octaves**, which increases the detail and depth of the noise map. By combining octaves with **persistence** and **lacunarity**, you can produce more complex and realistic terrain.
 
+<img width="325" alt="Screenshot 2025-05-22 at 16 37 46" src="https://github.com/user-attachments/assets/ce0c384e-de05-468b-ada6-7f3d762a42df" />
 
+---
+
+## 📦 Versions ![Version Release](https://img.shields.io/badge/release-v2.0.0-blue)
+This project was built in 3 stages. Each release represents a milestone toward the final version.
+
+### 🧭 V0.0.1 – Alpha
+Initial simulation of a plane of Perlin Noise.
+
+<img width="600" alt="Screenshot 2025-05-22 at 16 34 29" src="https://github.com/user-attachments/assets/8b5521d2-1551-4a42-8670-d54b0c28fdf6" />
+
+### 🗺️ V0.1.0 – Beta
+Introduced octaves to generate fractal noise. Also added a **seed** value, a pseudorandom number that stores the terrain configuration. Changing the seed creates new terrain, and reusing it regenerates the same terrain.
+
+<img width="600" alt="Screenshot 2025-05-22 at 16 42 27" src="https://github.com/user-attachments/assets/a49b11c2-70e3-4f5e-aa67-97d43d786116" />
+
+### 🎨 V1.0.0 – Public Release
+Added color mapping by associating height values (0 to 1) with color thresholds for each terrain type. Also introduced camera controls and improved usability for testing.
+
+<img width="600" alt="Screenshot 2025-05-22 at 16 42 48" src="https://github.com/user-attachments/assets/a9f21ccf-7f97-4e9c-8f33-24fd2573f656" />
+
+---
 
 ## 📝 How to Build
 To build and run this project:
 
-```Bash
+```bash
 # Ensure you have Unity (version 5.3.0f4 or later) installed.
 # Download from: https://unity.com/releases
 
@@ -27,7 +78,7 @@ To build and run this project:
 git clone https://github.com/WateryLemon/EPQ-Procedural-Terrain-Simulation-.git
 
 # Open Unity Hub
-# Click 'Add', then select the project folder (e.g., 'PLG Simulation P2 color')
+# Click 'Add' and select the project folder (e.g., 'PLG Simulation P2 color')
 
 # Open the project in Unity Editor
 
@@ -36,12 +87,15 @@ git clone https://github.com/WateryLemon/EPQ-Procedural-Terrain-Simulation-.git
 
 # Press Play to run the simulation
 
-# To edit scripts, open the project in Visual Studio Code: code .
+# To edit scripts, open the project in Visual Studio Code:
+code .
 ```
+
+
 
 ## 📚 Project Structure & Components
 
-This Unity project is organized for clarity and modularity. Here’s a breakdown of the main components:
+This Unity project is structured for clarity and modularity. Here's a breakdown of the main components:
 
 🌄 Noise Generation
 - Noise: Generates 2D noise maps using Perlin noise, supporting multiple octaves, persistence, lacunarity, and random seed/offsets for varied terrain.
@@ -62,26 +116,8 @@ This Unity project is organized for clarity and modularity. Here’s a breakdown
 🛠️ Editor Tools
 - MapGeneratorEditor: Custom Unity Editor inspector for the map generator, enabling real-time updates and a "Generate" button for quick iteration.
 
-**Example Project Structure**:
-```
-PLG Simulation P2 color/
-├── Assets/
-│   ├── Scripts/
-│   │   ├── Noise.cs
-│   │   ├── MapGenerator.cs
-│   │   ├── MapDisplay.cs
-│   │   ├── TextureGenerator.cs
-│   │   └── camera/CameraControler.cs
-│   └── Editor/
-│       └── MapGeneratorEditor.cs
-├── ProjectSettings/
-├── Library/
-└── ...
-```
 
 
-
-<a name="contacts"></a>
 ## 📬 Contacts
 
 For questions, feedback, or collaboration inquiries, please reach out:
